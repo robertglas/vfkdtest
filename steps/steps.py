@@ -4,7 +4,8 @@ use_step_matcher("re")
 
 @given(u'I open (?P<url>.+)')
 def step_impl(context, url):
-    context.driver.get("http://www.%s/" % url)
+    print("Open http://www."+url+"/")
+    context.driver.get("http://www."+url+"/")
 
 @step(u'the title should contain "(?P<title>.+)"')
 def step_impl(context, title):
