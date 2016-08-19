@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-@given(u'I open google.com')
-def step_impl(context):
-    context.driver.get("http://www.google.com/")
+@given(u'I open (?P<url>.+)')
+def step_impl(context, url):
+    context.driver.get("http://www.%s/" % url)
 
 
 @step(u'the title should contain "{title}"')
