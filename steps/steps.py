@@ -2,10 +2,10 @@
 from behave import *
 use_step_matcher("re")
 
-@given(u'I open (?P<url>.+)')
+@given(u'I open "(?P<url>.+)"')
 def step_impl(context, url):
-    print("Open http://www."+url+"/")
-    context.driver.get("http://www."+url+"/")
+    print("Open http://www.%s/" % url)
+    context.driver.get("http://www.%s/" % url)
 
 @step(u'the title should contain "(?P<title>.+)"')
 def step_impl(context, title):
