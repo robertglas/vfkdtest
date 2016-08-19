@@ -1,5 +1,7 @@
-Feature: testing google
+# -*- coding: utf-8 -*-
+# Feature
+Feature: Behave Selenium Showcase
 
-  Scenario: visit google and check
-     When we visit google
-     Then it should have a title "Google"
+Scenario: Showing off behave and Selenium
+    Given I open google.com
+    Then the title should contain "Google"
